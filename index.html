@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Ziggy — Descubra a saúde do seu dinheiro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ABERTURA -->
+<section id="screen-intro" class="screen active">
+  <div class="container">
+    <div class="image-placeholder">
+      <span>[ Imagem: mockup do app — dark mode, glassmorphism, glow verde ]</span>
+    </div>
+    <h1>Descubra em 2 minutos como está a saúde do seu dinheiro</h1>
+    <p class="subtitle">Responda algumas perguntas rápidas e receba um diagnóstico personalizado sobre seus hábitos financeiros.</p>
+    <button class="btn-primary" onclick="goTo('screen-q1')">QUERO DESCOBRIR</button>
+  </div>
+</section>
+
+<!-- ETAPA 01 — Engajamento -->
+<section id="screen-q1" class="screen">
+  <div class="container">
+    <div class="progress-bar"><div class="progress-fill" style="width:10%"></div></div>
+    <p class="step-label">Etapa 1 de 10</p>
+    <h2>Qual é a sua faixa de idade?</h2>
+    <div class="options single" data-question="q1">
+      <button class="option-card" data-value="18-24">18 a 24 anos</button>
+      <button class="option-card" data-value="25-34">25 a 34 anos</button>
+      <button class="option-card" data-value="35-44">35 a 44 anos</button>
+      <button class="option-card" data-value="45+">45 anos ou mais</button>
+    </div>
+    <button class="btn-primary btn-next" onclick="goTo('screen-q2')" disabled>CONTINUAR</button>
+  </div>
+</section>
+
+<!-- ETAPA 02 — Problema -->
+<section id="screen-q2" class="screen">
+  <div class="container">
+    <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+    <p class="step-label">Etapa 2 de 10</p>
+    <h2>Hoje, como você descreveria sua vida financeira?</h2>
+    <div class="options single" data-question="q2">
+      <button class="option-card" data-value="organizada">Está organizada</button>
+      <button class="option-card" data-value="melhorar">Poderia melhorar</button>
+      <button class="option-card" data-value="incendios">Vivo apagando incêndios</button>
+      <button class="option-card" data-value="sem-nocao">Nunca sei para onde meu dinheiro vai</button>
+    </div>
+    <button class="btn-primary btn-next" onclick="goTo('screen-q3')" disabled>CONTINUAR</button>
+  </div>
+</section>
+
+<section id="screen-q3" class="screen">
+  <div class="container">
+    <div class="progress-bar"><div class="progress-fill" style="width:30%"></div></div>
+    <p class="step-label">Etapa 3 de 10</p>
+    <h2>Em quais situações você mais perde dinheiro?</h2>
+    <p class="hint">Selecione todas que se aplicam</p>
+    <div class="options multi" data-question="q3">
+      <button class="option-card" data-value="impulso">Compras por impulso</button>
+      <button class="option-card" data-value="delivery">Delivery</button>
+      <button class="option-card" data-value="assinaturas">Assinaturas esquecidas</button>
+      <button class="option-card" data-value="cartao">Cartão de crédito</button>
+      <button class="option-card" data-value="parcelamentos">Parcelamentos</button>
+      <button class="option-card" data-value="sem-ideia">Não faço ideia</button>
+    </div>
+    <button class="btn-primary btn-next" onclick="goTo('screen-q4')" disabled>CONTINUAR</button>
+  </div>
+</section>
+
+<section id="screen-q4" class="screen">
+  <div class="container">
+    <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+    <p class="step-label">Etapa 4 de 10</p>
+    <h2>Você sabe exatamente quanto gasta por mês?</h2>
+    <div class="options single" data-question="q4">
+      <button class="option-card" data-value="sim">Sim</button>
+      <button class="option-card" data-value="ideia">Tenho uma ideia</button>
+      <button class="option-card" data-value="nao">Não faço ideia</button>
+    </div>
+    <button class="btn-primary btn-next" onclick="goTo('screen-q5')" disabled>CONTINUAR</button>
+  </div>
+</section>
+
+<section id="screen-q5" class="screen">
+  <div class="container">
+    <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
+    <p class="step-label">Etapa 5 de 10</p>
+    <h2>Há quanto tempo você sente que perdeu o controle das suas finanças?</h2>
+    <div class="options single" data-question="q5">
+      <button class="option-card" data-value="mes">Só esse mês</button>
+      <button class="option-card" data-value="meses">Alguns meses</button>
+      <button class="option-card" data-value="ano">Mais de um ano</button>
+      <button class="option-card" data-value="nunca">Não lembro de já ter tido controle</button>
+    </div>
+    <button class="btn-primary btn-next" onclick="goTo('screen-q6')" disabled>CONTINUAR</button>
+  </div>
+</section>
+
+<section id="screen-q6" class="screen">
+  <div class="container">
+    <div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>
+    <p class="step-label">Etapa 6 de 10</p>
+    <h2>No final do mês normalmente você...</h2>
+    <div class="options single" data-question="q6">
+      <button class="option-card" data-value="sobra">Sobra dinheiro</button>
+      <button class="option-card" data-value="zero">Fico no zero a zero</button>
+      <button class="option-card" data-value="limite">Uso o limite</button>
+      <button class="option-card" data-value="emprestado">Preciso pegar dinheiro emprestado</button>
+    </div>
+    <button class="btn-primary btn-next" onclick="goTo('screen-transition1')" disabled>CONTINUAR</button>
+  </div>
+</section>
+
+<!-- TRANSIÇÃO 1 — Prova social -->
+<section id="screen-transition1" class="screen">
+  <div class="container">
+    <p class="social-proof">+12.000 pessoas já começaram a organizar suas finanças usando inteligência artificial.</p>
+    <div class="image-placeholder">
+      <span>[ Imagem: UI cards flutuantes com categorias de gastos, fundo escuro, accent verde ]</span>
+    </div>
+    <p class="transition-text">Imagine saber exatamente para onde seu dinheiro está indo todos os meses.</p>
+    <button class="btn-primary" onclick="goTo('screen-q7')">EU QUERO ISSO</button>
+  </div>
+</section>
+
+<!-- ETAPA 03 — Desejo -->
+<section id="screen-q7" class="screen">
+  <div class="container">
+    <div class="progress-bar"><div class="progress-fill" style="width:70%"></div></div>
+    <p class="step-label">Etapa 7 de 10</p>
+    <h2>Qual é o seu maior objetivo financeiro?</h2>
+    <p class="hint">Selecione todas que se aplicam</p>
+    <div class="options multi" data-question="q7">
+      <button class="option-card" data-value="economizar">Economizar dinheiro</button>
+      <button class="option-card" data-value="dividas">Sair das dívidas</button>
+      <button class="option-card" data-value="investir">Investir</button>
+      <button class="option-card" data-value="carro">Comprar um carro</button>
+      <button class="option-card" data-value="casa">Comprar uma casa</button>
+      <button class="option-card" data-value="viajar">Viajar</button>
+      <button class="option-card" data-value="tranquilidade">Ter tranquilidade financeira</button>
+    </div>
+    <button class="btn-primary btn-next" onclick="goTo('screen-q8')" disabled>CONTINUAR</button>
+  </div>
+</section>
+
+<section id="screen-q8" class="screen">
+  <div class="container">
+    <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+    <p class="step-label">Etapa 8 de 10</p>
+    <h2>Se você tivesse total clareza sobre seu dinheiro hoje, o que mudaria primeiro na sua vida?</h2>
+    <div class="options single" data-question="q8">
+      <button class="option-card" data-value="dormir">Eu dormiria mais tranquilo</button>
+      <button class="option-card" data-value="dividas">Eu pagaria minhas dívidas mais rápido</button>
+      <button class="option-card" data-value="guardar">Eu conseguiria guardar dinheiro todo mês</button>
+      <button class="option-card" data-value="aperto">Eu pararia de viver no aperto</button>
+    </div>
+    <button class="btn-primary btn-next" onclick="goTo('screen-transition2')" disabled>CONTINUAR</button>
+  </div>
+</section>
+
+<!-- TRANSIÇÃO 2 -->
+<section id="screen-transition2" class="screen">
+  <div class="container">
+    <h2>Imagine descobrir cobranças esquecidas automaticamente...</h2>
+    <p class="transition-text">Assinaturas que você nem lembra mais. Gastos que cresceram sem perceber. Oportunidades reais de economizar.</p>
+    <div class="image-placeholder">
+      <span>[ Imagem: mockup WhatsApp com alertas de cobrança duplicada, glow verde ]</span>
+    </div>
+    <button class="btn-primary" onclick="goTo('screen-q9')">CONTINUAR</button>
+  </div>
+</section>
+
+<!-- ETAPA 04 — Solução -->
+<section id="screen-q9" class="screen">
+  <div class="container">
+    <div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div>
+    <p class="step-label">Etapa 9 de 10</p>
+    <h2>Como você controla suas finanças hoje?</h2>
+    <div class="options single" data-question="q9">
+      <button class="option-card" data-value="papel">Papel</button>
+      <button class="option-card" data-value="planilha">Planilha</button>
+      <button class="option-card" data-value="app">Aplicativo</button>
+      <button class="option-card" data-value="banco">Banco</button>
+      <button class="option-card" data-value="nada">Não controlo</button>
+    </div>
+    <button class="btn-primary btn-next" onclick="goTo('screen-q10')" disabled>CONTINUAR</button>
+  </div>
+</section>
+
+<section id="screen-q10" class="screen">
+  <div class="container">
+    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    <p class="step-label">Etapa 10 de 10</p>
+    <h2>Se uma inteligência artificial pudesse organizar tudo isso automaticamente pra você, sem planilha e sem esforço...</h2>
+    <div class="options single" data-question="q10">
+      <button class="option-card" data-value="imediatamente">Usaria imediatamente</button>
+      <button class="option-card" data-value="testar">Gostaria de testar</button>
+      <button class="option-card" data-value="depende">Depende de como funciona</button>
+      <button class="option-card" data-value="sozinho">Ainda prefiro fazer sozinho</button>
+    </div>
+    <button class="btn-primary btn-next" onclick="goTo('screen-loading')" disabled>VER MEU RESULTADO</button>
+  </div>
+</section>
+
+<!-- LOADING -->
+<section id="screen-loading" class="screen">
+  <div class="container loading-container">
+    <h2>Estamos analisando seu perfil financeiro...</h2>
+    <div class="progress-bar loading-bar"><div class="progress-fill" id="loading-fill"></div></div>
+    <p class="loading-text" id="loading-text">Identificando padrões...</p>
+  </div>
+</section>
+
+<!-- RESULTADO -->
+<section id="screen-result" class="screen">
+  <div class="container">
+    <p class="result-label">Seu perfil financeiro é:</p>
+    <h1 id="result-title"></h1>
+    <p id="result-desc" class="result-desc"></p>
+
+    <div class="result-box">
+      <h3>Seu próximo passo</h3>
+      <p>A boa notícia: existe uma forma simples de resolver isso sem planilha complicada.</p>
+      <p>O Ziggy usa inteligência artificial pra organizar seus gastos automaticamente e mostrar onde você está desperdiçando dinheiro — direto no seu WhatsApp.</p>
+      <p>Você gostaria de ver como isso funcionaria com o seu perfil, agora mesmo?</p>
+    </div>
+
+    <div class="image-placeholder">
+      <span>[ Imagem: mockup premium — tela de chat "Oi 👋", cards de alerta flutuantes, glow verde ]</span>
+    </div>
+
+    <a href="#" class="btn-primary btn-cta">QUERO CONHECER O ZIGGY</a>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0D0D0D;
+  color: #FFFFFF;
+  min-height: 100vh;
+}
+
+.screen {
+  display: none;
+  min-height: 100vh;
+  padding: 40px 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.container {
+  max-width: 520px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  color: #A0A0A0;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.step-label {
+  color: #A0A0A0;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.hint {
+  color: #A0A0A0;
+  font-size: 0.85rem;
+  margin-top: -16px;
+  margin-bottom: 20px;
+}
+
+/* Progress bar */
+.progress-bar {
+  background: #1A1A1A;
+  border-radius: 100px;
+  height: 6px;
+  width: 100%;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: #C6FF3E;
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.4s ease;
+}
+
+/* Option cards */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.option-card {
+  background: #1A1A1A;
+  border: 1px solid #2A2A2A;
+  border-radius: 12px;
+  padding: 16px 20px;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-card:hover {
+  border-color: #C6FF3E;
+  box-shadow: 0 0 12px rgba(198, 255, 62, 0.15);
+}
+
+.option-card.selected {
+  border-color: #C6FF3E;
+  background: #1F2B0E;
+  box-shadow: 0 0 16px rgba(198, 255, 62, 0.2);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: #C6FF3E;
+  color: #0D0D0D;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 100px;
+  padding: 16px 48px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #B5EE2E;
+}
+
+.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-next {
+  width: 100%;
+}
+
+/* Image placeholders */
+.image-placeholder {
+  background: #1A1A1A;
+  border: 1px dashed #2A2A2A;
+  border-radius: 16px;
+  padding: 60px 24px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder span {
+  color: #A0A0A0;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Transition screens */
+.social-proof {
+  color: #C6FF3E;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.transition-text {
+  color: #A0A0A0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.loading-bar {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 16px;
+}
+
+.loading-text {
+  color: #A0A0A0;
+  font-size: 0.9rem;
+}
+
+/* Result */
+.result-label {
+  color: #A0A0A0;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.result-desc {
+  color: #A0A0A0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.result-box {
+  background: #1A1A1A;
+  border: 1px solid #2A2A2A;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.result-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #C6FF3E;
+}
+
+.result-box p {
+  color: #A0A0A0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.result-box p:last-child {
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.btn-cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 24px;
+  padding: 18px 48px;
+  font-size: 1.1rem;
+}
+
+/* Smooth transitions */
+.screen {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
