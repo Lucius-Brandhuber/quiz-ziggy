@@ -142,22 +142,12 @@ h2 {
   width: 100%;
 }
 
-/* Image placeholders */
-.image-placeholder {
-  background: #1A1A1A;
-  border: 1px dashed #2A2A2A;
+/* Quiz images */
+.quiz-img {
+  width: 100%;
+  max-width: 420px;
   border-radius: 16px;
-  padding: 60px 24px;
   margin-bottom: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.image-placeholder span {
-  color: #A0A0A0;
-  font-size: 0.85rem;
-  text-align: center;
 }
 
 /* Transition screens */
