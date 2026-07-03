@@ -211,6 +211,14 @@ h2 {
   margin-bottom: 32px;
 }
 
+.result-bridge {
+  color: #C6FF3E;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
 .result-box {
   background: #1A1A1A;
   border: 1px solid #2A2A2A;

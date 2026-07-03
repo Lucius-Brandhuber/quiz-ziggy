@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "quiz-ziggy",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3999", "/Users/lucius/Desktop/quiz-ziggy"],
+      "port": 3999
+    }
+  ]
+}
